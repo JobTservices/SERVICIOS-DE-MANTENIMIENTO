@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Servicios de Mantenimiento Residencial</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+&nbsp;
+&nbsp;
+
+    * {
+      box-sizing: border-box;
+    }
+&nbsp;
+&nbsp;
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      background-color: #000000;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      color: #ffffff;
+    }
+&nbsp;
+&nbsp;
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #ffffff;
+      text-shadow: 1px 1px 5px rgba(255,255,255,0.2);
+    }
+&nbsp;
+&nbsp;
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+&nbsp;
+&nbsp;
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 480px;
+      margin: auto;
+    }
+&nbsp;
+&nbsp;
+
+    form {
+      background: #121212;
+      padding: 25px 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+      max-width: 480px;
+      width: 100%;
+      color: #ffffff;
+      font-size: 1rem;
+    }
+&nbsp;
+&nbsp;
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #ddd;
+    }
+&nbsp;
+&nbsp;
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1.8px solid #444;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+      font-family: inherit;
+      resize: vertical;
+      background-color: #1c1c1c;
+      color: #eee;
+    }
+&nbsp;
+&nbsp;
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #6b8ce3;
+      outline: none;
+      background-color: #2a2a2a;
+      color: #fff;
+    }
+&nbsp;
+&nbsp;
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #4567d2;
+      color: white;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 700;
+      box-shadow: 0 5px 12px rgba(69,103,210,0.7);
+      transition: background-color 0.3s ease;
+    }
+&nbsp;
+&nbsp;
+
+    button:hover {
+      background: #3453a8;
+    }
+&nbsp;
+&nbsp;
+
+    .confirmation {
+      margin-top: 24px;
+      padding: 14px 20px;
+      background-color: #2a462b;
+      border: 2px solid #57b74a;
+      border-radius: 10px;
+      color: #cde5b5;
+      font-weight: 700;
+      text-align: center;
+      display: none;
+      max-width: 480px;
+      width: 100%;
+    }
+&nbsp;
+&nbsp;
+
+    @media (max-width: 520px) {
+      body {
+        padding: 10px;
+      }
+&nbsp;
+&nbsp;
+
+      header h1 {
+        font-size: 2.2rem;
+      }
+&nbsp;
+&nbsp;
+
+      form {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Servicios de Mantenimiento Residencial</h1>
+    <p>Solicita y contrata fácilmente servicios de mantenimiento para tu hogar: reparaciones, plomería, electricidad y más.</p>
+  </header>
+&nbsp;
+&nbsp;
+
+  <form id="serviceForm" method="POST" action="https://formspree.io/f/{your_form_id}" novalidate>
+    <!-- REPLACE {your_form_id} with your actual Formspree form ID -->
+https://formspree.io/f/mgvkgkol
+
+
+    <label for="name">Nombre completo</label>
+    <input type="text" id="name" name="name" placeholder="Tu nombre completo" required minlength="3" />
+&nbsp;
+&nbsp;
+
+    <label for="address">Dirección</label>
+    <input type="text" id="address" name="address" placeholder="Dirección donde se realizará el servicio" required minlength="5" />
+&nbsp;
+&nbsp;
+
+    <label for="contact">Teléfono o correo electrónico</label>
+    <input type="text" id="contact" name="contact" placeholder="Ej: 555-123-4567 o correo@ejemplo.com" required />
+&nbsp;
+&nbsp;
+
+    <label for="serviceType">Tipo de servicio</label>
+    <select id="serviceType" name="serviceType" required>
+      <option value="" disabled selected>Selecciona un servicio</option>
+      <option value="electricidad">Electricidad</option>
+      <option value="plomeria">Plomería</option>
+      <option value="reparacion_lavadora">Reparación de Lavadora</option>
+      <option value="reparacion_refrigerador">Reparación de Refrigerador</option>
+      <option value="aire_ac">Instalación/Mantenimiento de A/C</option>
+      <option value="pintura">Pintura</option>
+      <option value="impermeabilizacion">Impermeabilización</option>
+      <option value="carpinteria">Carpintería</option>
+      <option value="herrería">Herrería</option>
+    </select>
+&nbsp;
+&nbsp;
+
+    <label for="details">Detalles adicionales</label>
+    <textarea id="details" name="details" rows="4" placeholder="Describe brevemente el trabajo que necesitas"></textarea>
+&nbsp;
+&nbsp;
+
+    <!-- Hidden fields for email subject and folio -->
+    <input type="hidden" name="_subject" id="emailSubject" value="Nuevo servicio solicitado" />
+    <input type="hidden" name="folio" id="folioField" value="" />
+&nbsp;
+&nbsp;
+
+    <button type="submit">Solicitar Servicio</button>
+  </form>
+&nbsp;
+&nbsp;
+
+  <div class="confirmation" id="confirmationMessage">
+    Gracias por la información, a la brevedad te confirmaremos el día y horario disponible.
+  </div>
+&nbsp;
+&nbsp;
+
+  <script>
+    function generateFolio() {
+      const now = new Date();
+      const pad = (n) => n.toString().padStart(2, '0');
+      const year = now.getFullYear();
+      const month = pad(now.getMonth() + 1);
+      const day = pad(now.getDate());
+      const hours = pad(now.getHours());
+      const minutes = pad(now.getMinutes());
+      const seconds = pad(now.getSeconds());
+      const random = Math.floor(1000 + Math.random() * 9000);
+      return `FOLIO-${year}${month}${day}-${hours}${minutes}${seconds}-${random}`;
+    }
+&nbsp;
+&nbsp;
+
+    const form = document.getElementById('serviceForm');
+    const confirmation = document.getElementById('confirmationMessage');
+    const emailSubjectInput = document.getElementById('emailSubject');
+    const nameInput = document.getElementById('name');
+    const folioField = document.getElementById('folioField');
+&nbsp;
+&nbsp;
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+&nbsp;
+&nbsp;
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+&nbsp;
+&nbsp;
+
+      // Generate folio and set to hidden input
+      const folio = generateFolio();
+      folioField.value = folio;
+&nbsp;
+&nbsp;
+
+      // Set the subject with the client's name and folio for the email
+      const clientName = nameInput.value.trim();
+      if(clientName.length > 0) {
+        emailSubjectInput.value = `Solicitud de ${clientName} - ${folio}`;
+      }
+&nbsp;
+&nbsp;
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          form.style.display = 'none';
+          confirmation.style.display = 'block';
+          form.reset();
+        } else {
+          response.json().then(data => {
+            if(Object.hasOwn(data, 'errors')) {
+              alert(data["errors"].map(error => error.message).join(", "));
+            } else {
+              alert("Error enviando el formulario. Inténtalo de nuevo más tarde.");
+            }
+          });
+        }
+      }).catch(() => {
+        alert("Error enviando el formulario. Inténtalo de nuevo más tarde.");
+      });
+    });
+  </script>
+</body>
+</html>
+&nbsp;
+&nbsp;
